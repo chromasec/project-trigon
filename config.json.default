@@ -1,0 +1,8 @@
+{
+    "CLIENT_ID": "",
+    "CLIENT_SECRET": "",
+    "REDIRECT_URI": "",
+    "REQUIRED_GUILD_ID": "",
+    "PORT": 3000,
+    "LOGGING_WEBHOOK_URL": ""
+}
