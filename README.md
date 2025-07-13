@@ -4,6 +4,6 @@
 
 # How to set up
 *To set up project trigon, edit `config.json.default` and rename it to `config.json` then do ```pip install -r requirements.txt``` and to run it do ```python main.py```*
-
+*Edit `index.html` and `panel.html` to match your servers name !*
 
 ### Lambdaist's out, bye !
