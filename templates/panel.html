@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Qe'um - Trigon</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>El Qe'um - Trigon</h1>
+        <form id="startForm">
+            <label for="botToken">Enter Bot Token:</label>
+            <input type="text" id="botToken" name="botToken" required>
+            <button type="submit">Start Bot</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('startForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const botToken = document.getElementById('botToken').value;
+            const response = await fetch('/start', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: `botToken=${botToken}`
+            });
+            if (response.ok) {
+                alert('Bot started successfully!');
+            } else {
+                alert('Invalid bot token.');
+            }
+        });
+    </script>
+</body>
+</html>
